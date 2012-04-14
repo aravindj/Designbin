@@ -10,7 +10,7 @@ The project has been hosted in http://designb.in
 Hope this project will be of use to freelancers who work in geographically distributed
 fashion and for open source projects!
 
-**Deploy it behind your n/w**
+**Deploying the project**
 
 * Download the project.
 * Install bottle.py, apache
