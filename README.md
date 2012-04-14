@@ -17,26 +17,26 @@ fashion and for open source projects!
 * Change relevant (mostly the SITE_ROOT and TOP_LEVEL_DOMAIN) configurations in config.py.
 * Create an app.wsgi file with following code
     
-    import os, sys, bottle
-    sys.path = ['/path/to/designbin/folder/'] + sys.path
-    os.chdir(os.path.dirname(__file__))
+        import os, sys, bottle
+        sys.path = ['/path/to/designbin/folder/'] + sys.path
+        os.chdir(os.path.dirname(__file__))
 
-    import designbin
-    application = bottle.default_app()
+        import designbin
+        application = bottle.default_app()
     
 * Add the following to your apache configuration file.
 
-    &lt;VirtualHost *:80&gt;
-        ServerName example.com
-        ServerAlias *.example.com
+        &lt;VirtualHost *:80&gt;
+            ServerName example.com
+            ServerAlias *.example.com
 
-        WSGIDaemonProcess designbin user=www-data group=www-data processes=1 threads=5
-        WSGIScriptAlias / /path/to/designbin/folder/app.wsgi
+            WSGIDaemonProcess designbin user=www-data group=www-data processes=1 threads=5
+            WSGIScriptAlias / /path/to/designbin/folder/app.wsgi
 
-        &lt;Directory /path/to/designbin/folder&gt;
-        WSGIProcessGroup designbin
-            WSGIApplicationGroup %{GLOBAL}
-            Order deny,allow
-            Allow from all
-        &lt;/Directory&gt;
-    &lt;/VirtualHost&gt;
+            &lt;Directory /path/to/designbin/folder&gt;
+            WSGIProcessGroup designbin
+                WSGIApplicationGroup %{GLOBAL}
+                Order deny,allow
+                Allow from all
+            &lt;/Directory&gt;
+        &lt;/VirtualHost&gt;
