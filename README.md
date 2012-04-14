@@ -26,17 +26,17 @@ fashion and for open source projects!
     
 * Add the following to your apache configuration file.
 
-        &lt;VirtualHost *:80&gt;
+        <VirtualHost *:80>
             ServerName example.com
             ServerAlias *.example.com
 
             WSGIDaemonProcess designbin user=www-data group=www-data processes=1 threads=5
             WSGIScriptAlias / /path/to/designbin/folder/app.wsgi
 
-            &lt;Directory /path/to/designbin/folder&gt;
+            <Directory /path/to/designbin/folder>
             WSGIProcessGroup designbin
                 WSGIApplicationGroup %{GLOBAL}
                 Order deny,allow
                 Allow from all
-            &lt;/Directory&gt;
-        &lt;/VirtualHost&gt;
+            </Directory>
+        </VirtualHost>
