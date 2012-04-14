@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Designbin</title>
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://designb.in/css/style.css">
+<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
+<!-- Bootstrap CSS fixes for IE6 -->
+<!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
+<!-- Bootstrap Image Gallery styles -->
+</head>
+<body>
+<div class="offset1 span2 navigation">
+    <ul>
+    <li>
+    <a href="http://designb.in/">Home</a>
+    </li>
+    <li><a href="http://designb.in/about.html">About</a></li>
+    </ul>
+</div>
+<div class="container">
+    <br /><br /><br /><br />
+    <div class="row">
+        <div class="offset1 span10 well">
+            <h2>
+            Welcome!
+            </h2><br /><br />
+            <table class="table">
+                %for file in files:
+                    <tr><td>
+                    {{file['filename']}}</td>
+                    <td><a href="{{file['url']}}">{{file['url']}}</a><br />
+                    </td></tr>
+                %end
+            </table><br />
+        </div>
+    </div>
+</div>
+<div class="notes">
+    <div class="container">
+    <div class="row">
+        <div class="offset1 span11">
+        <div class="span11 footer">
+            &copy; <a href="http://aravindj.com">Aravind J </a>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+</body> 
+</html>
