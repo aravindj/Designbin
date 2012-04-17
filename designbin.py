@@ -49,7 +49,7 @@ def render_static_content(folder, filename):
         root = Config.STATIC_PATH + "/" + folder + "/"
         return static_file(filename, root=root)
     else:
-        raise HttpError
+        abort(404, "Invalid Url!")
 
 def is_site_root():
     (scheme, host, path, query_string, fragment) = request.urlparts
@@ -96,8 +96,8 @@ def upload():
                    "delete_type":"POST"})
         return json.dumps(result)
     else:
-        logger.info("upload(): error")
-        raise HttpError
+        logger.warning("upload(): error")
+        abort(404, "Invalid Url!")
 
 def get_subdomain():
     while True:
