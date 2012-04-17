@@ -130,4 +130,4 @@ def get_hash():
 
 @error(404)
 def error404(error):
-    return 'Nothing here, sorry'
+    return static_file("404.html", root=Config.STATIC_PATH)
