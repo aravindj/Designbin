@@ -16,7 +16,7 @@ handler = logging.handlers.RotatingFileHandler(Config.LOGGER_PATH, maxBytes = 10
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 
 @get('/')
 def index():
