@@ -7,11 +7,12 @@
 from bottle import *
 from datetime import *
 import json, logging, hashlib, subprocess, os, time
-
+import logging.handlers
 from conf import Config
 
 logger = logging.getLogger('designbin')
-handler = logging.FileHandler(Config.LOGGER_PATH)
+handler = logging.handlers.RotatingFileHandler(Config.LOGGER_PATH, maxBytes = 10000000,
+    backupCount = 25)
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
