@@ -40,3 +40,10 @@ fashion and for open source projects!
                 Allow from all
             </Directory>
         </VirtualHost>
+* Add /path/to/designbin/folder to your python path
+
+        export PYTHONPATH=$PYTHONPATH:/path/to/designbin/folder
+        
+    Add the above line to your ~/.bashrc file.
+    
+For deploying it in any other server than apache, refer to bottle.py documentation.
