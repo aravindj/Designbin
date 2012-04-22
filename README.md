@@ -45,5 +45,7 @@ fashion and for open source projects!
         export PYTHONPATH=$PYTHONPATH:/path/to/designbin/folder
         
     Add the above line to your ~/.bashrc file.
-    
+
+* Dont forget to add a wildcard subdomain entry in your dns configuration.
+
 For deploying it in any other server than apache, refer to bottle.py documentation.
