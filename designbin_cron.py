@@ -3,7 +3,7 @@ import os, time
 from datetime import datetime, timedelta
 from conf import Config
 
-dirs = os.listdir(Config.MODEL_PATH)
+dirs = os.listdir(Config.SITE_ROOT_FOLDER + Config.MODEL_PATH)
 past = datetime.now() - timedelta(days=10)
 time_diff = time.mktime(past.timetuple())
 
