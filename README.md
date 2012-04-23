@@ -48,4 +48,9 @@ fashion and for open source projects!
 
 * Dont forget to add a wildcard subdomain entry in your dns configuration.
 
+* If you want the files to be not more than 10 days old, then you should add
+following in your cronjob entry
+
+        0 0 * * * python /path/to/designbin/designbin_cron.py
+
 For deploying it in any other server than apache, refer to bottle.py documentation.
