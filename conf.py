@@ -1,6 +1,7 @@
 class Config:
     SITE_ROOT = ["www.designb.in", "designb.in"]
     TOP_LEVEL_DOMAIN = "designb.in"
+    SITE_ROOT_FOLDER = "/path/to/designbin/folder/"
     STATIC_PATH = "view/"
     CSS_PATH = STATIC_PATH + "/css/"
     JS_PATH = STATIC_PATH + "/js/"
