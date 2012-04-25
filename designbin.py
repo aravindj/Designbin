@@ -29,7 +29,7 @@ def index():
         files = os.listdir(Config.MODEL_PATH + subdomain)
         file_list = []
         for each_file in files:
-            url = request.url + "/" + each_file
+            url = request.url + each_file
             file_list.append({'url' : url, 'filename' : each_file})
         return template(Config.STATIC_PATH + "subdomain_index.html", files = file_list)
 

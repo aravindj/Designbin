@@ -5,7 +5,7 @@ from conf import Config
 
 subdomain_folder = Config.SITE_ROOT_FOLDER + Config.MODEL_PATH
 dirs = os.listdir(subdomain_folder)
-past = datetime.now() - timedelta(days=1)
+past = datetime.now() - timedelta(days=10)
 time_diff = time.mktime(past.timetuple())
 
 for directory in dirs:
