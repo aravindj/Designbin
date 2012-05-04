@@ -9,7 +9,7 @@ past = datetime.now() - timedelta(days=10)
 time_diff = time.mktime(past.timetuple())
 
 for directory in dirs:
-    mtime = os.path.getmtime(  + directory)
+    mtime = os.path.getmtime( subdomain_folder + directory)
     if mtime < time_diff:
         os.system("chmod 777 "+ subdomain_folder + directory)
         os.system("rm -rf " + subdomain_folder + directory)
